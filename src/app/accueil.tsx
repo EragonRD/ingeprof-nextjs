@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Navbar  from "./navbar";
-
+import Carousel from "./components/caroussel";
+import About from "./about";
 
 export default function Home() {
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between ">
-       <Navbar />
+      <Navbar />
       
       <div className="logo">
         <Image
