@@ -15,7 +15,7 @@ export default function Home() {
   <input type="text" id="first" name="first" />
   <label for="last">Prenom:</label>
   <input type="text" id="last" name="last" />
-  <div>
+  <div className = 'flex items-stretch'>
     <button type="submit">envoyer</button>
   </div>
   
