@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import styles from './Navbar.module.css';
+import styles from '../Navbar.module.css';
 import Image from 'next/image'
-import About from "./about";
+import About from '../About/page';
+
 
 
 export default function Navbar() {
@@ -35,7 +36,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/login">
+          <Link href="/profil">
               Profil  
           </Link>
         </li>
