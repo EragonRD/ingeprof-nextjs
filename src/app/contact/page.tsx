@@ -1,8 +1,22 @@
+"use client";
 import Image from "next/image";
 import Navbar  from "../components/navbar"
 import Carousel from "../components/caroussel";
 
-export default function Home() {
+
+import React, { useState } from "react";
+
+const ContactForm: React.FC = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Traitez les données du formulaire ici
+    console.log({ name, email, message });
+  };
+
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between ">
@@ -15,7 +29,7 @@ export default function Home() {
   <input type="text" id="first" name="first" />
   <label for="last">Prenom:</label>
   <input type="text" id="last" name="last" />
-  <div className = 'flex items-stretch'>
+  <div>
     <button type="submit">envoyer</button>
   </div>
   
@@ -36,4 +50,6 @@ export default function Home() {
 
     </main>
   );
-}
+};
+
+export default ContactForm;
